@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.2.0
+
+    environment:
+      MYSQL_DATABASE: todayon
+      MYSQL_PASSWORD: 3062
+      MYSQL_ROOT_PASSWORD: 3062
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./aiddoru-data:/var/lib/mysql
+
+volumes:
+  db_data:
